@@ -7,10 +7,10 @@ const titulo = document.querySelector('.app__title')
 const botoes = document.querySelectorAll('.app__card-button')
 const startPauseBt = document.querySelector('#start-pause')
 const musicaFocoInput = document.querySelector('#alternar-musica')
-const musica = new Audio('/sons/luna-rise-part-one.mp3')
-const audioPlay = new Audio('/sons/play.wav');
-const audioPausa = new Audio('/sons/pause.mp3');
-const audioTempoFinalizado = new Audio('./sons/beep.mp3')
+const musica = new Audio('luna-rise-part-one.mp3')
+const audioPlay = new Audio('play.wav');
+const audioPausa = new Audio('pause.mp3');
+const audioTempoFinalizado = new Audio('.beep.mp3')
 const tempoNaTela = document.querySelector('#timer')
 
 const iniciarOuPausarBt = document.querySelector('#start-pause span')
@@ -54,7 +54,7 @@ function alterarContexto(contexto) {
         contexto.classList.remove('active')
     })
     html.setAttribute('data-contexto', contexto)
-    banner.setAttribute('src', `/imagens/${contexto}.png`)
+    banner.setAttribute('src', `${contexto}.png`)
     switch (contexto) {
         case "foco":
             
@@ -95,10 +95,10 @@ startPauseBt.addEventListener('click', iniciarOuPausar)
 function statusStartPauseBt (){
     if (iniciarOuPausarBt.textContent == "Começar"){
         iniciarOuPausarBt.textContent = "Pausar"
-        iconeStartPauseBt.setAttribute('src', '/imagens/pause.png')
+        iconeStartPauseBt.setAttribute('src', 'pause.png')
     }else{
         iniciarOuPausarBt.textContent = "Começar"
-        iconeStartPauseBt.setAttribute('src', '/imagens/play_arrow.png')
+        iconeStartPauseBt.setAttribute('src', 'play_arrow.png')
     }
 }
 
